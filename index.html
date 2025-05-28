@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HDWORX WOOD</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, nav, footer { background-color: #8B4513; color: white; padding: 15px; text-align: center; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    section { padding: 20px; }
+    .gallery img { max-width: 100%; height: auto; margin: 10px 0; }
+    .promo { background-color: #FFD700; padding: 15px; text-align: center; font-weight: bold; }
+    form input, form textarea { width: 100%; margin-bottom: 10px; padding: 10px; }
+    form button { padding: 10px 20px; background-color: #8B4513; color: white; border: none; }
+    .lang-switch { text-align: right; padding: 10px; background: #f2f2f2; }
+    .lang-nl, .lang-fr { display: none; }
+    .visible { display: block; }
+  </style>
+</head>
+<body>
+
+<div class="lang-switch">
+  <a href="#" onclick="switchLang('nl')">NL</a> | <a href="#" onclick="switchLang('fr')">FR</a>
+</div>
+
+<header>
+  <h1>HDWORX WOOD</h1>
+  <p>Houten ramen & deuren op maat / Fenêtres & portes en bois sur mesure</p>
+</header>
+
+<nav>
+  <a href="#about">Over ons / À propos</a>
+  <a href="#services">Diensten / Services</a>
+  <a href="#promo">Promotie / Promotion</a>
+  <a href="#gallery">Galerij / Galerie</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <div class="lang-nl visible">
+    <h2>Over ons</h2>
+    <p>Met meer dan 10 jaar ervaring levert HDWORX WOOD vakmanschap in houten schrijnwerk op maat. Wij werken met hoogwaardige materialen en een persoonlijke aanpak.</p>
+  </div>
+  <div class="lang-fr">
+    <h2>À propos de nous</h2>
+    <p>Avec plus de 10 ans d’expérience, HDWORX WOOD fournit un travail artisanal en menuiserie bois sur mesure. Nous utilisons des matériaux de haute qualité et une approche personnalisée.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="lang-nl visible">
+    <h2>Diensten</h2>
+    <ul>
+      <li>Houten ramen en deuren op maat</li>
+      <li>Interieurafwerking in massief hout</li>
+      <li>Herstellingen en renovaties</li>
+    </ul>
+  </div>
+  <div class="lang-fr">
+    <h2>Services</h2>
+    <ul>
+      <li>Fenêtres et portes en bois sur mesure</li>
+      <li>Finitions intérieures en bois massif</li>
+      <li>Réparations et rénovations</li>
+    </ul>
+  </div>
+</section>
+
+<section id="promo" class="promo">
+  <div class="lang-nl visible">PROMOTIE: 10% korting bij uw eerste bestelling!</div>
+  <div class="lang-fr">PROMO : 10% de réduction sur votre première commande !</div>
+</section>
+
+<section id="gallery">
+  <h2>Galerij / Galerie</h2>
+  <div class="gallery">
+    <img src="placeholder1.jpg" alt="Voorbeeld houten raam / Exemple de fenêtre en bois">
+    <img src="placeholder2.jpg" alt="Voorbeeld houten deur / Exemple de porte en bois">
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <div class="lang-nl visible">
+      <input type="text" placeholder="Naam" required>
+      <input type="email" placeholder="E-mail" required>
+      <textarea placeholder="Bericht" required></textarea>
+    </div>
+    <div class="lang-fr">
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="E-mail" required>
+      <textarea placeholder="Message" required></textarea>
+    </div>
+    <button type="submit">Verstuur / Envoyer</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 HDWORX WOOD - <a href="mailto:info@hdworx.be" style="color:white; text-decoration: underline;">info@hdworx.be</a> - +32 484 42 49 09 / +32 488 14 60 11
+</footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-nl').forEach(el => el.classList.remove('visible'));
+    document.querySelectorAll('.lang-fr').forEach(el => el.classList.remove('visible'));
+    if (lang === 'nl') {
+      document.querySelectorAll('.lang-nl').forEach(el => el.classList.add('visible'));
+    } else {
+      document.querySelectorAll('.lang-fr').forEach(el => el.classList.add('visible'));
+    }
+  }
+</script>
+
+</body>
+</html>
